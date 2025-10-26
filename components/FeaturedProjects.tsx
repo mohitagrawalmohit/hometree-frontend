@@ -103,7 +103,7 @@ export default function FeaturedProjects() {
   const currentProject = projects[selectedIndex];
 
   return (
-    <section className="py-20 px-6 md:px-16 bg-white flex flex-col md:flex-row gap-10 items-center justify-between relative overflow-hidden">
+    <section className="py-10 px-6 md:px-16 bg-white flex flex-col md:flex-row gap-10 items-center justify-between relative overflow-hidden">
       {/* LEFT SIDE CONTENT */}
       <div className="md:w-[40%] space-y-6">
         {/* Static Heading */}
@@ -183,7 +183,7 @@ export default function FeaturedProjects() {
                   src={project.image}
                   alt={project.title}
                   width={1000}
-                  height={700}
+                  height={1000}
                   className="object-cover w-full h-[420px]"
                 />
                 <div className="absolute top-4 left-4 bg-black/60 px-3 py-1  text-white text-sm font-medium tracking-wide">
