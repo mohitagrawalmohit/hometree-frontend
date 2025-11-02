@@ -43,7 +43,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-10 h-10 text-[#9ac65b] hover:text-[#0296d6]"
+              className="w-10 h-10 text-[#00A17F] hover:text-[#BBD694]"
             >
               <path
                 strokeLinecap="round"
@@ -59,8 +59,8 @@ export default function Navbar() {
           <Image
             src="/hometreeLogo.png"
             alt="Logo"
-            width={scrolled ? 220 : 220}
-            height={scrolled ? 220 : 220}
+            width={scrolled ? 100 : 100}
+            height={scrolled ? 100 : 100}
             className="object-contain transition-all duration-300"
             priority
           />
