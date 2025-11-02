@@ -59,8 +59,8 @@ export default function Navbar() {
           <Image
             src="/hometreeLogo.png"
             alt="Logo"
-            width={scrolled ? 160 : 160}
-            height={scrolled ? 160 : 160}
+            width={scrolled ? 220 : 220}
+            height={scrolled ? 220 : 220}
             className="object-contain transition-all duration-300"
             priority
           />
