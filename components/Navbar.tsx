@@ -69,18 +69,18 @@ export default function Navbar() {
         {/* 📋 Desktop Nav (visible only when scrolled) */}
         {scrolled && (
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium absolute right-8">
-            <Link href="" className="hover:text-[#0296d6] transition">
+            <Link href="" className="hover:text-[#BBD694] transition">
               Home
             </Link>
-            <Link href="#aboutUs" className="hover:text-[#0296d6] transition">
+            <Link href="#aboutUs" className="hover:text-[#BBD694] transition">
               About Us
             </Link>
-            <Link href="#projects" className="hover:text-[#0296d6] transition">
+            <Link href="#projects" className="hover:text-[##BBD694] transition">
               Projects
             </Link>
             <Link
               href="#ContactUs"
-              className="px-5 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#9ac65b] to-[#0296d6] hover:opacity-90 transition"
+              className="px-5 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#00A17F] to-[#BBD694] hover:opacity-90 transition"
             >
               Contact Us
             </Link>
@@ -131,7 +131,7 @@ export default function Navbar() {
               <motion.span
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 250 }}
-                className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white group-hover:from-[#9ac65b] group-hover:to-[#0296d6] transition-all duration-500 ease-out"
+                className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white group-hover:from-[#00A17F] group-hover:to-[#BBD694] transition-all duration-500 ease-out"
               >
                 {item.name}
               </motion.span>
@@ -139,7 +139,7 @@ export default function Navbar() {
               {/* Matching Gradient Underline */}
               {/* <motion.span
                 layoutId={`underline-${item.name}`}
-                className="absolute left-0 bottom-[-6px] h-[3px] bg-gradient-to-r from-[#9ac65b] to-[#0296d6] rounded-full w-0 group-hover:w-full transition-all duration-500 ease-out"
+                className="absolute left-0 bottom-[-6px] h-[3px] bg-gradient-to-r from-[#00A17F] to-[#BBD694] rounded-full w-0 group-hover:w-full transition-all duration-500 ease-out"
               ></motion.span> */}
             </Link>
           </motion.div>
