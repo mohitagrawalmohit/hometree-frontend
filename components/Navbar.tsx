@@ -43,7 +43,7 @@ export default function Navbar() {
               viewBox="0 0 24 24"
               strokeWidth={2}
               stroke="currentColor"
-              className="w-10 h-10 text-[#00A17F] hover:text-[#BBD694]"
+              className="w-13 h-13 text-[#00A17F] hover:text-[#BBD694]"
             >
               <path
                 strokeLinecap="round"
@@ -109,7 +109,7 @@ export default function Navbar() {
         className="flex flex-col items-center space-y-10 text-4xl md:text-5xl font-medium"
       >
         {[
-          {name:"Home", href:""},
+          {name:"Home", href:"/"},
            { name: "About Us", href: "#aboutUs" },
           { name: "Projects", href: "#projects" },
          

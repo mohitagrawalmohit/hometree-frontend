@@ -109,7 +109,7 @@ export default function FeaturedProjects() {
         {/* Static Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
           Residential Projects by the Best Builder in{" "}
-          <span className="bg-gradient-to-r from-[#9ac65b] to-[#0296d6] text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-[#00A17F] to-[#BBD694] text-transparent bg-clip-text">
             India
           </span>
         </h2>
@@ -121,7 +121,7 @@ export default function FeaturedProjects() {
               key={tab}
               className={`cursor-pointer pb-1 transition-all ${
                 tab === currentProject.status
-                  ? "text-gray-900 border-b-2 border-[#9ac65b]"
+                  ? "text-gray-900 border-b-2 border-[#00A17F]"
                   : "hover:text-gray-700"
               }`}
             >
@@ -151,7 +151,7 @@ export default function FeaturedProjects() {
     <ul className="mt-4 space-y-2 text-gray-800 text-sm md:text-base">
       {currentProject.highlights.map((point, i) => (
         <li key={i} className="flex items-center gap-2">
-          <span className="w-2 h-2 bg-gradient-to-r from-[#9ac65b] to-[#0296d6] rounded-full"></span>
+          <span className="w-2 h-2 bg-gradient-to-r from-[#00A17F] to-[#BBD694] rounded-full"></span>
           {point}
         </li>
       ))}
@@ -163,8 +163,8 @@ export default function FeaturedProjects() {
 
         {/* Static Button */}
         <Link
-          href={`/projects/${currentProject.id}`}
-          className="inline-block mt-6 px-8 py-3 bg-gradient-to-r from-[#9ac65b] to-[#0296d6] text-white rounded-full font-medium shadow-md hover:opacity-90 transition"
+          href={`/property/the-modern-moreland-house`}
+          className="inline-block mt-6 px-8 py-3 bg-gradient-to-r from-[#00A17F] to-[#BBD694] text-white rounded-full font-medium shadow-md hover:opacity-90 transition"
         >
           Explore
         </Link>
@@ -197,13 +197,13 @@ export default function FeaturedProjects() {
         {/* Navigation Arrows */}
         <button
           onClick={() => emblaApi && emblaApi.scrollPrev()}
-          className="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-100 hover:bg-gradient-to-r hover:from-[#9ac65b] hover:to-[#0296d6] text-gray-700 hover:text-white p-3 rounded-full shadow transition"
+          className="absolute top-1/2 left-0 -translate-y-1/2 bg-gray-100 hover:bg-gradient-to-r hover:from-[#00A17F] hover:to-[#BBD694] text-gray-700 hover:text-white p-3 rounded-full shadow transition"
         >
           <ChevronLeft size={22} />
         </button>
         <button
           onClick={() => emblaApi && emblaApi.scrollNext()}
-          className="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-100 hover:bg-gradient-to-r hover:from-[#9ac65b] hover:to-[#0296d6] text-gray-700 hover:text-white p-3 rounded-full shadow transition"
+          className="absolute top-1/2 right-0 -translate-y-1/2 bg-gray-100 hover:bg-gradient-to-r hover:from-[#00A17F] hover:to-[#BBD694] text-gray-700 hover:text-white p-3 rounded-full shadow transition"
         >
           <ChevronRight size={22} />
         </button>

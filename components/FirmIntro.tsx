@@ -19,7 +19,7 @@ export default function FirmIntro() {
     >
       {/* Subtle Moving Gradient Background */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-[#9ac65b]/15 via-[#0296d6]/15 to-[#9ac65b]/15 blur-3xl"
+        className="absolute inset-0 bg-gradient-to-r from-[#00A17F]/15 via-[#BBD694]/15 to-[#00A17F]/15 blur-3xl"
         style={{ y }}
       />
 
@@ -33,7 +33,7 @@ export default function FirmIntro() {
           className="text-3xl md:text-5xl font-bold text-gray-900 leading-snug mb-6"
         >
           Building India’s{" "}
-          <span className="bg-gradient-to-r from-[#9ac65b] to-[#0296d6] text-transparent bg-clip-text">
+          <span className="bg-gradient-to-r from-[#00A17F] to-[#BBD694] text-transparent bg-clip-text">
             Most Trusted Real Estate Brand
           </span>
         </motion.h2>
@@ -62,7 +62,7 @@ export default function FirmIntro() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="flex flex-col items-center mb-14"
         >
-          <div className="h-[3px] w-20 bg-gradient-to-r from-[#9ac65b] to-[#0296d6] rounded-full mb-4"></div>
+          <div className="h-[3px] w-20 bg-gradient-to-r from-[#00A17F] to-[#BBD694] rounded-full mb-4"></div>
           <span className="uppercase tracking-wider text-sm font-semibold text-gray-700">
             Established Excellence Since 2015
           </span>
@@ -92,8 +92,8 @@ export default function FirmIntro() {
       </div>
 
       {/* Ambient Gradient Glows */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-[#9ac65b]/20 to-[#0296d6]/10 blur-3xl rounded-full" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#0296d6]/25 to-[#9ac65b]/10 blur-3xl rounded-full" />
+      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-[#00A17F]/20 to-[#BBD694]/10 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#BBD694]/25 to-[#00A17F]/10 blur-3xl rounded-full" />
     </section>
   );
 }

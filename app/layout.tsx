@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* ✅ Page content (hero, etc.) below navbar */}
         <main className="relative z-[1]">{children}</main>
+        <Footer />
       </body>
     </html>
   );

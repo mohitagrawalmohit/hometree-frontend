@@ -23,7 +23,7 @@ export default function Page({ params }: Props) {
     slug: params?.slug || "the-modern-moreland-house",
     name: "The Modern Moreland House",
     tagline: "Luxury living reimagined",
-    logo: "/project/greatevaluelogo.png",
+    logo: "/project/project-logo.svg",
     heroImage: "/project/hero.jpg", // full width hero image or video poster
     overviewBg: "/project/overview-bg.webp",
     section3Bg: "/project/section3-bg.jpg",
