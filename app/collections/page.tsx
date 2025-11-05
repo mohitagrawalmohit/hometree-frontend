@@ -39,7 +39,7 @@ export default function CollectionsPage() {
   const filteredProjects = projects.filter((p) => p.status === activeTab);
 
   // 👇 You can set hero background here (image or video)
-  const heroBackground = "/collection-hero.mp4"; // can be .mp4 or .jpg/.webp
+  const heroBackground = "/collectionherobg.mp4"; // can be .mp4 or .jpg/.webp
   const isVideo = heroBackground.endsWith(".mp4");
 
   return (
@@ -65,14 +65,7 @@ export default function CollectionsPage() {
           />
         )}
         <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-6">
-          <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Residential Projects
-          </h1>
-          <p className="mt-3 text-white/80 max-w-2xl text-sm md:text-base">
-            Discover premium residences designed for modern living and timeless comfort.
-          </p>
-        </div>
+        
       </section>
 
       {/* 2️⃣ Filter Section */}
