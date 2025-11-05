@@ -109,7 +109,7 @@ export default function CollectionsPage() {
         </div>
       </section>
 
-    {/* 3️⃣ Projects Section */}
+   {/* 3️⃣ Projects Section */}
 <section className="py-24">
   <div className="max-w-[90rem] mx-auto px-6 md:px-12 space-y-32">
     {filteredProjects.map((project, index) => (
@@ -117,23 +117,25 @@ export default function CollectionsPage() {
         key={project.id}
         className={`flex flex-col md:flex-row ${
           index % 2 === 1 ? "md:flex-row-reverse" : ""
-        } items-center gap-16 md:gap-24`}
+        } items-center md:items-stretch gap-16 md:gap-24`}
       >
-        {/* ✅ RIGHT: Image (shows first on mobile, right on desktop) */}
+        {/* ✅ IMAGE (First on mobile, right/left balanced on desktop) */}
         <div
-          className={`flex-1 relative w-full h-[400px] sm:h-[500px] md:h-[650px] overflow-hidden shadow-2xl 
-          order-1 md:order-2`}
+          className={`w-full md:w-1/2 relative min-h-[300px] sm:min-h-[400px] md:min-h-[650px] overflow-hidden shadow-2xl 
+          order-first md:order-none`}
         >
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-700 hover:scale-105"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            priority
+            className="object-cover object-center transition-transform duration-700 hover:scale-105"
           />
         </div>
 
-        {/* ✅ LEFT: Details (shows after image on mobile, left on desktop) */}
-        <div className="flex-1 text-gray-800 order-2 md:order-1">
+        {/* ✅ DETAILS (Balanced width on desktop, after image on mobile) */}
+        <div className="w-full md:w-1/2 text-gray-800">
           <h3 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
             {project.title}
           </h3>
@@ -182,6 +184,7 @@ export default function CollectionsPage() {
     ))}
   </div>
 </section>
+
 
 
 
