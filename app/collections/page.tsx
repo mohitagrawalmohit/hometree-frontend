@@ -31,6 +31,17 @@ const projects = [
     status: "Completed",
     slug: "hometree-skanda",
   },
+  {
+    id: 3,
+    title: "The Green Valley",
+    type: "Residential Apartments",
+    location: "On gaziabad Road",
+    config: "3 & 3.5 BHK Residential Apartments",
+    price: "₹1.2 Cr onwards*",
+    image: "/project3.jpg",
+    status: "Ongoing",
+    slug: "the-green-valley",
+  },
 ];
 
 export default function CollectionsPage() {
@@ -140,7 +151,7 @@ export default function CollectionsPage() {
               </div>
 
               {/* RIGHT: Image */}
-              <div className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-full h-[600px] overflow-hidden shadow-lg">
                 <Image
                   src={project.image}
                   alt={project.title}
