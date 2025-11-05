@@ -117,10 +117,13 @@ export default function CollectionsPage() {
         key={project.id}
         className={`flex flex-col md:flex-row ${
           index % 2 === 1 ? "md:flex-row-reverse" : ""
-        } items-center md:items-stretch gap-10 md:gap-24`}
+        } items-center gap-16 md:gap-24`}
       >
-        {/* ✅ IMAGE FIRST (for mobile always on top) */}
-        <div className="relative w-full h-[380px] sm:h-[450px] md:h-[650px] overflow-hidden shadow-xl rounded-lg order-1 md:order-none">
+        {/* ✅ RIGHT: Image (shows first on mobile, right on desktop) */}
+        <div
+          className={`flex-1 relative w-full h-[400px] sm:h-[500px] md:h-[650px] overflow-hidden shadow-2xl 
+          order-1 md:order-2`}
+        >
           <Image
             src={project.image}
             alt={project.title}
@@ -129,48 +132,48 @@ export default function CollectionsPage() {
           />
         </div>
 
-        {/* 🏡 DETAILS */}
-        <div className="flex-1 text-gray-800 mt-6 md:mt-0 order-2 md:order-none">
+        {/* ✅ LEFT: Details (shows after image on mobile, left on desktop) */}
+        <div className="flex-1 text-gray-800 order-2 md:order-1">
           <h3 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
             {project.title}
           </h3>
-          <p className="text-lg md:text-xl text-gray-500 mb-8">
+          <p className="text-lg md:text-xl text-gray-500 mb-10">
             {project.type}
           </p>
 
-          <div className="divide-y divide-gray-200 border-y border-gray-200 mb-8">
-            <div className="flex items-center gap-5 py-5">
+          <div className="divide-y divide-gray-200 border-y border-gray-200 mb-10 space-y-2">
+            <div className="flex items-center gap-6 py-6">
               <span className="text-2xl">📍</span>
-              <p className="text-base md:text-lg font-medium">
+              <p className="text-sm md:text-lg font-medium">
                 {project.location}
               </p>
             </div>
-            <div className="flex items-center gap-5 py-5">
+            <div className="flex items-center gap-6 py-6">
               <span className="text-2xl">🛏️</span>
-              <p className="text-base md:text-lg font-medium">
+              <p className="text-sm md:text-lg font-medium">
                 {project.config}
               </p>
             </div>
-            <div className="flex items-center gap-5 py-5">
+            <div className="flex items-center gap-6 py-6">
               <span className="text-2xl">💰</span>
-              <p className="text-base md:text-lg font-medium">
+              <p className="text-sm md:text-lg font-medium">
                 {project.price}
               </p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <div className="flex gap-6">
             <Link
               href={`/property/${project.slug}`}
               style={{
                 background: `linear-gradient(90deg, ${PRIMARY}, ${ACCENT})`,
               }}
-              className="px-8 py-3 text-base md:text-lg text-white font-semibold rounded-md hover:opacity-90 transition text-center"
+              className="px-10 py-3 text-lg text-white font-semibold hover:opacity-90 transition"
             >
               Explore
             </Link>
 
-            <button className="px-8 py-3 border-2 border-black text-base md:text-lg text-black font-semibold rounded-md hover:bg-black hover:text-white transition text-center">
+            <button className="px-10 py-3 border-2 border-black text-lg text-black font-semibold hover:bg-black hover:text-white transition">
               Brochure
             </button>
           </div>
