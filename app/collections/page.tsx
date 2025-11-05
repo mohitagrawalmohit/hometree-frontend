@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
-import Footer from "@/components/Footer";
+
 
 const PRIMARY = "#00A17F";
 const ACCENT = "#BBD694";
@@ -56,7 +56,7 @@ export default function CollectionsPage() {
   return (
     <div className="w-full">
       {/* 1️⃣ Hero Section (auto detects video/image) */}
-      <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
+      <section className="relative w-full h-[60vh] md:h-[120vh] overflow-hidden">
         {isVideo ? (
           <video
             src={heroBackground}
@@ -76,6 +76,12 @@ export default function CollectionsPage() {
           />
         )}
         <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-6">
+          <h1 className="text-3xl md:text-3xl font-semibold tracking-tight">
+            Discover premium residences designed for modern living and timeless comfort.
+          </h1>
+          
+        </div>
         
       </section>
 
@@ -90,7 +96,7 @@ export default function CollectionsPage() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab as "Ongoing" | "Completed")}
-                className={`px-5 py-2 rounded-md text-sm font-medium transition-all ${
+                className={`px-5 py-2  text-sm font-medium transition-all ${
                   activeTab === tab
                     ? "bg-[#BBD694] text-white"
                     : "text-black hover:text-[#00A17F]"
@@ -115,7 +121,7 @@ export default function CollectionsPage() {
       >
         {/* LEFT: Details */}
         <div className="flex-1 text-gray-800">
-          <h3 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
             {project.title}
           </h3>
           <p className="text-lg md:text-xl text-gray-500 mb-10">
@@ -124,20 +130,20 @@ export default function CollectionsPage() {
 
           <div className="divide-y divide-gray-200 border-y border-gray-200 mb-10 space-y-2">
             <div className="flex items-center gap-6 py-6">
-              <span className="text-3xl">📍</span>
-              <p className="text-lg md:text-xl font-medium">
+              <span className="text-2xl">📍</span>
+              <p className="text-sm md:text-lg font-medium">
                 {project.location}
               </p>
             </div>
             <div className="flex items-center gap-6 py-6">
-              <span className="text-3xl">🛏️</span>
-              <p className="text-lg md:text-xl font-medium">
+              <span className="text-2xl">🛏️</span>
+              <p className="text-sm md:text-lg font-medium">
                 {project.config}
               </p>
             </div>
             <div className="flex items-center gap-6 py-6">
-              <span className="text-3xl">💰</span>
-              <p className="text-lg md:text-xl font-medium">
+              <span className="text-2xl">💰</span>
+              <p className="text-sm md:text-lg font-medium">
                 {project.price}
               </p>
             </div>
@@ -149,19 +155,19 @@ export default function CollectionsPage() {
               style={{
                 background: `linear-gradient(90deg, ${PRIMARY}, ${ACCENT})`,
               }}
-              className="px-10 py-3 text-lg text-white font-semibold rounded-full hover:opacity-90 transition"
+              className="px-10 py-3 text-lg text-white font-semibold  hover:opacity-90 transition"
             >
               Explore
             </Link>
 
-            <button className="px-10 py-3 border-2 border-black text-lg text-black font-semibold rounded-full hover:bg-black hover:text-white transition">
+            <button className="px-10 py-3 border-2 border-black text-lg text-black font-semibold  hover:bg-black hover:text-white transition">
               Brochure
             </button>
           </div>
         </div>
 
         {/* RIGHT: Image */}
-        <div className="flex-1 relative w-full h-[650px] rounded-2xl overflow-hidden shadow-2xl">
+        <div className="flex-1 relative w-full h-[650px]  overflow-hidden shadow-2xl">
           <Image
             src={project.image}
             alt={project.title}
@@ -175,8 +181,7 @@ export default function CollectionsPage() {
 </section>
 
 
-      {/* 4️⃣ Footer */}
-      <Footer />
+      
     </div>
   );
 }

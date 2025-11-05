@@ -80,7 +80,7 @@ export default function Navbar() {
             </Link>
             <Link
               href="#ContactUs"
-              className="px-5 py-2 rounded-full text-white font-semibold bg-gradient-to-r from-[#00A17F] to-[#BBD694] hover:opacity-90 transition"
+              className="px-5 py-2  text-white font-semibold bg-gradient-to-r from-[#00A17F] to-[#BBD694] hover:opacity-90 transition"
             >
               Contact Us
             </Link>
