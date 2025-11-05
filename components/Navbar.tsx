@@ -8,16 +8,13 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 0);
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
+    const handleScroll = () => setScrolled(window.scrollY > 0);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
 
@@ -31,11 +28,11 @@ export default function Navbar() {
       style={{ zIndex: 9999 }}
     >
       <div className="relative flex items-center justify-center max-w-7xl mx-auto px-6 py-4">
-        {/* 🍔 Hamburger (only visible on mobile + when not scrolled) */}
+        {/* 🍔 Hamburger (mobile only, visible when not scrolled) */}
         {!scrolled && (
           <button
             onClick={toggleMenu}
-            className="absolute left-4 p-3  bg-none hover:bg-none transition backdrop-sm "
+            className="absolute left-4 p-3 bg-none hover:bg-none transition backdrop-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +51,7 @@ export default function Navbar() {
           </button>
         )}
 
-        {/* 🏠 Logo Centered */}
+        {/* 🏠 Logo */}
         <Link href="/" className="flex justify-center items-center mx-auto z-[50]">
           <Image
             src="/hometreeLogo.png"
@@ -66,21 +63,68 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* 📋 Desktop Nav (visible only when scrolled) */}
+        {/* 📋 Desktop Navigation */}
         {scrolled && (
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium absolute right-8">
-            <Link href="" className="hover:text-[#BBD694] transition">
+            <Link href="/" className="hover:text-[#BBD694] transition">
               Home
             </Link>
+
             <Link href="#aboutUs" className="hover:text-[#BBD694] transition">
               About Us
             </Link>
-            <Link href="#projects" className="hover:text-[##BBD694] transition">
-              Projects
-            </Link>
+
+            {/* Dropdown Menu */}
+            <div
+              className="relative"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <button
+                className="hover:text-[#BBD694] transition flex items-center gap-1"
+              >
+                Projects
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={2}
+                  stroke="currentColor"
+                  className="w-4 h-4 mt-[1px]"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              <AnimatePresence>
+                {dropdownOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-3 bg-white text-gray-800 shadow-lg rounded-md py-2 w-48 border border-gray-100"
+                  >
+                    <Link
+                      href="/residential"
+                      className="block px-5 py-2.5 text-sm hover:bg-gradient-to-r hover:from-[#00A17F] hover:to-[#BBD694] hover:text-white transition-all"
+                    >
+                      Residential Projects
+                    </Link>
+                    <Link
+                      href="/commercial"
+                      className="block px-5 py-2.5 text-sm hover:bg-gradient-to-r hover:from-[#00A17F] hover:to-[#BBD694] hover:text-white transition-all"
+                    >
+                      Commercial Projects
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <Link
               href="#ContactUs"
-              className="px-5 py-2  text-white font-semibold bg-gradient-to-r from-[#00A17F] to-[#BBD694] hover:opacity-90 transition"
+              className="px-5 py-2 text-white font-semibold bg-gradient-to-r from-[#00A17F] to-[#BBD694] hover:opacity-90 transition"
             >
               Contact Us
             </Link>
@@ -88,88 +132,73 @@ export default function Navbar() {
         )}
       </div>
 
-      
-
-     {/* 🧭 Fullscreen Animated Menu (works for desktop + mobile) */}
-<AnimatePresence>
-  {menuOpen && (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed inset-0 bg-black/50 backdrop-blur-md flex flex-col items-center justify-center text-white"
-      style={{ zIndex: 9998 }}
-    >
-      <motion.nav
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="flex flex-col items-center space-y-10 text-4xl md:text-5xl font-medium"
-      >
-        {[
-          {name:"Home", href:"/"},
-           { name: "About Us", href: "#aboutUs" },
-          { name: "Projects", href: "#projects" },
-         
-          { name: "Contact Us", href: "#ContactUs" },
-         
-        ].map((item, index) => (
+      {/* 🧭 Fullscreen Animated Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
           <motion.div
-            key={item.name}
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 * index, duration: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-md flex flex-col items-center justify-center text-white"
+            style={{ zIndex: 9998 }}
           >
-            <Link
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
-              className="relative inline-block group"
+            <motion.nav
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="flex flex-col items-center space-y-10 text-4xl md:text-5xl font-medium"
             >
-              {/* Hover Gradient Text */}
-              <motion.span
-                whileHover={{ scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 250 }}
-                className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white group-hover:from-[#00A17F] group-hover:to-[#BBD694] transition-all duration-500 ease-out"
+              {[
+                { name: "Home", href: "/" },
+                { name: "About Us", href: "#aboutUs" },
+                { name: "Residential Projects", href: "/residential" },
+                { name: "Commercial Projects", href: "/commercial" },
+                { name: "Contact Us", href: "#ContactUs" },
+              ].map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: 25 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15 * index, duration: 0.4 }}
+                >
+                  <Link
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="relative inline-block group"
+                  >
+                    <motion.span
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 250 }}
+                      className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-white group-hover:from-[#00A17F] group-hover:to-[#BBD694] transition-all duration-500 ease-out"
+                    >
+                      {item.name}
+                    </motion.span>
+                  </Link>
+                </motion.div>
+              ))}
+            </motion.nav>
+
+            {/* ✖ Close Button */}
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="absolute top-8 right-8 text-white/80 hover:text-white transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-8 h-8"
               >
-                {item.name}
-              </motion.span>
-
-              {/* Matching Gradient Underline */}
-              {/* <motion.span
-                layoutId={`underline-${item.name}`}
-                className="absolute left-0 bottom-[-6px] h-[3px] bg-gradient-to-r from-[#00A17F] to-[#BBD694] rounded-full w-0 group-hover:w-full transition-all duration-500 ease-out"
-              ></motion.span> */}
-            </Link>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </motion.div>
-        ))}
-      </motion.nav>
-
-      {/* ✖ Close Button */}
-      <button
-        onClick={() => setMenuOpen(false)}
-        className="absolute top-8 right-8 text-white/80 hover:text-white transition"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-          className="w-8 h-8"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
-    </motion.div>
-  )}
-</AnimatePresence>
-
+        )}
+      </AnimatePresence>
     </header>
   );
 }
