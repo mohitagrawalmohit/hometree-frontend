@@ -57,7 +57,7 @@ export default function FounderSection() {
         {/* RIGHT: Founder Image */}
         <div className="relative w-full h-[550px] md:h-[600px] rounded-lg overflow-hidden shadow-2xl">
           <Image
-            src="/founder.webp" // replace with your founder image
+            src="/Founder.webp" // replace with your founder image
             alt="Amit – Founder of HomeTree"
             fill
             className="object-cover object-center"
