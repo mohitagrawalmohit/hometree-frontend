@@ -39,15 +39,7 @@ export default function Testimonials() {
   const testimonial = testimonials[index];
 
   return (
-    <section
-      className="relative flex flex-col items-center justify-center py-24 md:py-32 text-center overflow-hidden"
-      style={{
-        background: "linear-gradient(135deg, #ffffff 0%, #f7f9f8 100%)",
-      }}
-    >
-      {/* Soft background glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00A17F]/10 via-transparent to-[#BBD694]/10 blur-3xl" />
-
+    <section className="relative flex flex-col items-center justify-center py-24 md:py-32 text-center overflow-hidden">
       <div className="relative z-10 max-w-3xl mx-auto px-6">
         {/* Heading */}
         <h2 className="text-3xl md:text-5xl font-bold mb-16">
@@ -71,14 +63,14 @@ export default function Testimonials() {
               strokeWidth={1.5}
             />
 
-            <p className="text-xl md:text-2xl text-gray-800 italic leading-relaxed mb-10">
+            <p className="text-xl md:text-2xl text-gray-100 italic leading-relaxed mb-10">
               “{testimonial.text}”
             </p>
 
-            <div className="text-gray-700 font-semibold text-lg">
+            <div className="text-gray-200 font-semibold text-lg">
               {testimonial.author}
             </div>
-            <div className="text-gray-500 text-sm">{testimonial.role}</div>
+            <div className="text-gray-400 text-sm">{testimonial.role}</div>
           </motion.div>
         </AnimatePresence>
 
@@ -90,7 +82,7 @@ export default function Testimonials() {
               className={`w-3 h-3 rounded-full transition-all duration-500 ${
                 i === index
                   ? "bg-gradient-to-r from-[#00A17F] to-[#BBD694] w-6"
-                  : "bg-gray-300"
+                  : "bg-gray-500/40"
               }`}
             ></div>
           ))}
