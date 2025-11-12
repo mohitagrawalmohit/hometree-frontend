@@ -6,14 +6,15 @@ import OurServices from "@/components/OurServices";
 import WhyChooseHometree from "@/components/WhyChooseHometree";
 import FounderSection from "@/components/FounderSection";
 
-
 export default function HomePage() {
   return (
     <main
-      className="min-h-screen bg-fixed bg-cover bg-center text-gray-900"
-      style={{
-        backgroundImage: "url('/main-bg.webp')", // ✅ replace with your real path
-      }}
+      className="
+        min-h-screen 
+        bg-fixed bg-cover bg-center text-gray-900
+        bg-[url('/main-bg-mobile.webp')]    /* 📱 Default (mobile) background */
+        md:bg-[url('/main-bg.webp')]        /* 💻 Desktop background */
+      "
     >
       {/* Semi-transparent overlay for depth & readability */}
       <div className="bg-black/50">
@@ -21,7 +22,7 @@ export default function HomePage() {
         <FeaturedProjects />
         <FirmIntro />
         <OurServices />
-        <VisionMissionValues /> 
+        <VisionMissionValues />
         <WhyChooseHometree />
         <FounderSection />
       </div>
