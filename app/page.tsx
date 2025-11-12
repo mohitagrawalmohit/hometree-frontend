@@ -10,11 +10,20 @@ export default function HomePage() {
   return (
     <main
       className="
-        min-h-screen 
-        bg-fixed bg-cover bg-center text-gray-900
-        bg-[url('/main-bg-mobile.webp')]    /* 📱 Default (mobile) background */
-        md:bg-[url('/main-bg.webp')]        /* 💻 Desktop background */
+        min-h-screen text-gray-900 
+        bg-fixed bg-cover bg-center 
+        bg-[url('/main-bg-mobile.webp')]   /* 📱 Mobile background */
+        md:bg-[url('/main-bg.webp')]       /* 💻 Desktop background */
+        md:bg-cover md:bg-center md:bg-fixed
       "
+      style={{
+        // ✅ Fine-tuned background behavior for mobile
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover", // fills height & width
+        backgroundPosition: "center top", // better for vertical mobile layout
+        minHeight: "100vh",
+        width: "100%",
+      }}
     >
       {/* Semi-transparent overlay for depth & readability */}
       <div className="bg-black/50">
