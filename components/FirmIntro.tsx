@@ -8,28 +8,31 @@ export default function FirmIntro() {
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-snug mb-6">
-          Building India’s{" "}
+        <h2 className="text-3xl md:text-3xl font-bold text-gray-900 leading-snug mb-6">
+          Hometree is more than a brokerage —{" "}
           <span className="bg-gradient-to-r from-[#00A17F] to-[#BBD694] text-transparent bg-clip-text">
-            Most Trusted Real Estate Brand
+            it’s a real estate ecosystem built on trust, transparency, and transformation
           </span>
         </h2>
 
         {/* Description */}
         <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
-          At <strong>HomeTree</strong>, we’re not brokers — we’re curators of
-          spaces that define modern living. Our philosophy goes beyond
-          transactions; we build trust, elevate experiences, and connect people
-          to homes that inspire belonging and growth. Rooted in innovation and
-          driven by integrity, we are shaping the new language of real estate in
-          India.
+          With over <strong>22 years</strong> of cumulative expertise in real estate consulting,
+           project marketing, and investment advisory, we help individuals and investors make informed, 
+           rewarding, and emotion-backed real estate decisions.
+        </p>
+        <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-10">
+          We work with India’s most trusted developers like <strong>M3M, L&T Realty, Experion,
+           Kalpataru, Ace, Bhutani, and Eldeco</strong> — bringing curated opportunities that
+            blend appreciation potential, lifestyle value, and assured credibility.
+
         </p>
 
         {/* Divider + Tagline */}
         <div className="flex flex-col items-center mb-14">
           <div className="h-[3px] w-20 bg-gradient-to-r from-[#00A17F] to-[#BBD694] rounded-full mb-4"></div>
           <span className="uppercase tracking-wider text-sm font-semibold text-gray-700">
-            Established Excellence Since 2015
+            Established Excellence Since 2003
           </span>
         </div>
 
