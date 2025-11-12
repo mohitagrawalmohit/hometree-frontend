@@ -5,6 +5,7 @@ import VisionMissionValues from "@/components/VisionMissionValues";
 import OurServices from "@/components/OurServices";
 import WhyChooseHometree from "@/components/WhyChooseHometree";
 import FounderSection from "@/components/FounderSection";
+import Testimonials from "@/components/Testimonials";
 
 export default function HomePage() {
   return (
@@ -34,6 +35,9 @@ export default function HomePage() {
         <VisionMissionValues />
         <WhyChooseHometree />
         <FounderSection />
+        <Testimonials />
+        
+        
       </div>
     </main>
   );
