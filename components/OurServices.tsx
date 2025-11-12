@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Briefcase, Building2, BarChart, Users, FileText } from "lucide-react";
 
 const PRIMARY = "#00A17F";
@@ -76,38 +75,32 @@ export default function OurServices() {
     <section
       className="relative py-24 md:py-32 text-white"
       style={{
-        backgroundImage: "url('/services.webp')", // 🌆 Add your background image here
+        backgroundImage: "url('/services.webp')", // background image for the whole section
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed", // subtle parallax feel
+        backgroundAttachment: "fixed", // sticky / parallax feel
       }}
     >
-      {/* Overlay for better contrast */}
-      <div className="absolute inset-0 bg-black/40" />
+      {/* Overlay for contrast */}
+      <div className="absolute inset-0 bg-black/45" />
 
+      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-center">
         {/* Header */}
-        <h2
-          className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00A17F] to-[#BBD694] text-transparent bg-clip-text"
-          
-        >
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#00A17F] to-[#BBD694] text-transparent bg-clip-text">
           Our Services
         </h2>
-        <p className="text-gray-300 text-base md:text-xl max-w-3xl mx-auto mb-14">
+        <p className="text-gray-300 text-base md:text-xl max-w-3xl mx-auto mb-16">
           A complete suite of real estate services designed to simplify your
           journey — from consultation to investment and beyond.
         </p>
 
-        {/* Grid Layout */}
+        {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
-          {services.map((service, i) => (
-            <motion.div
+          {services.map((service) => (
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="relative bg-white/10 backdrop-blur-md border border-white/20  overflow-hidden group shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-500"
+              className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
             >
               {/* Image */}
               <div className="relative w-full h-52 overflow-hidden">
@@ -115,7 +108,7 @@ export default function OurServices() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               </div>
@@ -150,15 +143,7 @@ export default function OurServices() {
                   ))}
                 </ul>
               </div>
-
-              {/* Glow Border Effect */}
-              <div
-                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
-                style={{
-                  boxShadow: `0 0 25px ${PRIMARY}40`,
-                }}
-              ></div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
