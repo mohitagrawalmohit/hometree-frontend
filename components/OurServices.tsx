@@ -100,7 +100,7 @@ export default function OurServices() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="relative bg-white/10 backdrop-blur-md border border-white/20 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
+              className="relative bg-white/10 backdrop-blur-md border border-white/20  overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500"
             >
               {/* Image */}
               <div className="relative w-full h-52 overflow-hidden">
