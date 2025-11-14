@@ -67,7 +67,7 @@ export default function VisionMissionValues() {
                 style={{
                   background: `linear-gradient(90deg, ${PRIMARY}, ${ACCENT})`,
                   WebkitBackgroundClip: "text",
-                  color: "transparent",
+                  color: "white",
                 }}
               >
                 {item.title}

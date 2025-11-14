@@ -73,7 +73,7 @@ export default function OurServices() {
 
   return (
     <section
-      className="relative py-24 md:py-32 text-white"
+      className="relative py-8 md:py-10 text-white"
       style={{
         backgroundImage: "url('/services.webp')", // background image for the whole section
         backgroundSize: "cover",
@@ -82,7 +82,7 @@ export default function OurServices() {
       }}
     >
       {/* Overlay for contrast */}
-      <div className="absolute inset-0 bg-black/45" />
+      <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-center">
