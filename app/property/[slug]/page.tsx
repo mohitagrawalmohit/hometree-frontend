@@ -51,6 +51,7 @@ export default function Page({ params }: Props) {
       "A luxurious modern villa development with spacious layouts, abundant natural light, premium finishes and sustainable design. Prime location with excellent connectivity.",
     locationText: "Sector 150, Noida — Near City Center",
   };
+  
 
   return <ProjectDetail property={property} />;
 }

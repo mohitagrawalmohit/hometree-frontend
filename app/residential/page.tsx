@@ -10,38 +10,40 @@ const ACCENT = "#BBD694";
 
 const projects = [
   {
-    id: 1,
-    title: "The Right Life",
-    type: "Residential Apartments",
-    location: "On Sarjapur-Varthur Road",
-    config: "3 & 3.5 BHK Residential Apartments",
-    price: "₹1.5 Cr onwards*",
-    image: "/project1.webp",
-    status: "Ongoing",
-    slug: "the-right-life",
-  },
+  id: 1,
+  title: "M3M Jacob & Co.",
+  type: "Ultra-Luxury Residences / Mixed-Use Development",
+  location: "Sector 94, Noida",
+  config: "3BHK, 4BHK, 5BHK Duplex Sky Residences",
+  price: "₹6.5 Cr onwards",
+  image: "/homepage/projects/m3m-jacob.webp",
+  status: "Ongoing",
+  slug: "m3m-jacob-and-co",
+},
   {
-    id: 2,
-    title: "HomeTree Skanda",
-    type: "Luxury Residences",
-    location: "Sector 150, Noida",
-    config: "2, 3 & 4 BHK Premium Residences",
-    price: "₹2.1 Cr onwards*",
-    image: "/project2.jpg",
-    status: "Completed",
-    slug: "hometree-skanda",
-  },
+  id: 2,
+  title: "Experion 151 – Noida",
+  type: "Premium Residential Development",
+  location: "Sector 151, Noida",
+  config: "3BHK & 4BHK Premium Residences (Upcoming)",
+  price: "Price To Be Announced",
+  image: "/homepage/projects/experion-151.webp", // update path as needed
+  status: "Ongoing",
+  slug: "experion-151-noida",
+},
+
+  
   {
-    id: 3,
-    title: "The Green Valley",
-    type: "Residential Apartments",
-    location: "On gaziabad Road",
-    config: "3 & 3.5 BHK Residential Apartments",
-    price: "₹1.2 Cr onwards*",
-    image: "/project3.jpg",
-    status: "Ongoing",
-    slug: "the-green-valley",
-  },
+  id: 3,
+  title: "Ace Acreville",
+  type: "Residential Plotted Development",
+  location: "Sector 10, Greater Noida West",
+  config: "Freehold Plots (100–250 sq. yards)",
+  price: "₹95 Lakhs onwards",
+  image: "/homepage/projects/ace-acreville.webp",
+  status: "Ongoing",
+  slug: "ace-acreville",
+},
 ];
 
 export default function CollectionsPage() {
@@ -56,7 +58,7 @@ export default function CollectionsPage() {
   return (
     <div className="w-full">
       {/* 1️⃣ Hero Section (auto detects video/image) */}
-      <section className="relative w-full h-[60vh] md:h-[120vh] overflow-hidden">
+      <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
         {isVideo ? (
           <video
             src={heroBackground}

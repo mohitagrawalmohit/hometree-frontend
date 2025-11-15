@@ -16,7 +16,7 @@ export default function OurServices() {
         "M3M Jacob & Co.",
         "Kalpataru Vista",
         "Ace Acreville Plots",
-        "Eldeco Wow Life",
+        "Gaur Yamuna",
         "Experion Noida",
       ],
       icon: <Building2 size={36} />,
