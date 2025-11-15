@@ -52,6 +52,24 @@ const projects = [
     ],
     image: "/homepage/projects/ace-acreville.webp",
   },
+  {
+  id: 6,
+  title: "Gaur Chrysalis",
+  slug: "gaur-yamuna",
+  status: "Upcoming",
+  description:
+    "A premium 12-acre landmark residential project by Gaurs, featuring podium greens, 3 & 4 BHK luxury homes, and a world-class 75,000 sq. ft. clubhouse near Noida International Airport.",
+  highlights: [
+    "Located in Sector 22D, Yamuna Expressway",
+    "Developed by Gaursons Promoters Pvt. Ltd.",
+    "3 & 4 BHK Premium Residences",
+    "12-acre premium residential community",
+    "8 acres of podium-based green landscapes",
+    "75,000+ sq. ft. luxury clubhouse",
+  ],
+  image: "/homepage/projects/gaur-yamuna.webp",
+}
+
 ];
 
 export default function FeaturedProjects() {

@@ -146,4 +146,62 @@ export const projects: PropertyIn[] = [
 ],
 
   },
+
+  {
+  id: 4,
+  slug: "gaur-yamuna",
+  name: "Gaur Chrysalis",
+  tagline: "Luxury, Reimagined — By One of India’s Most Trusted Builders",
+  logo: "/logos/gaur-yamuna1.png",
+  possession: "EOI Open — Launch Soon",
+  unitType: "3 & 4 BHK Residences",
+
+  heroImage: "/homepage/projects/gaur-yamuna.webp",   // update with your actual image
+  overviewBg: "/project/overview-bg.webp",
+    section3Bg: "/project/section3-bg.jpg",
+    galleryBg: "/project/gallery-bg.jpg",
+
+  gallery: [
+      "/gallery-images/gaur-yamuna-gallery1.webp",
+      "/gallery-images/gaur-yamuna-gallery2.webp",
+      "/gallery-images/gaur-yamuna-gallery3.webp"
+
+  ],
+  map: "/maps/gaur-yamuna.webp",
+
+  description:
+    "Gaurs Group introduces a landmark luxury residential development in Sector 22D, Yamuna Expressway. Spread across 12 acres with podium greens, high-rise towers, premium amenities, and future-ready architecture, this project offers an elevated lifestyle next to Noida International Airport.",
+
+  locationText: "Sector 22D, Yamuna Expressway — Near Noida International Airport",
+
+  amenities: [
+    "Art & Culture Zone",
+    "Kids Play Area",
+    "Swimming Pool",
+    "Relaxation & Meditation Zone",
+    "Active Recreation & Sports Zone"
+  ],
+
+  whyInvest: [
+    "Next to Noida International Airport — India's Largest Upcoming Airport",
+    "Developed by Gaurs Group — One of India’s Most Trusted Developers",
+    "Massive Future Appreciation Potential in Yamuna Expressway Belt",
+    "Podium-Based Green Living Spread Across 8 Acres",
+    "Ultra-Spacious Low-Density Premium Towers"
+  ],
+
+  configurations: [
+    {
+      type: "3 BHK",
+      size: "1,800 sq. ft.",
+      residences: "Premium Tower Layout"
+    },
+    {
+      type: "4 BHK",
+      size: "2,400 sq. ft.",
+      residences: "Limited Inventory"
+    }
+  ]
+},
+
 ];

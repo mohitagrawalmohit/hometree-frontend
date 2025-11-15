@@ -44,6 +44,18 @@ const projects = [
   status: "Ongoing",
   slug: "ace-acreville",
 },
+{
+  id: 6,
+  title: "Gaur Chrysalis",
+  type: "Premium Residential",
+  location: "Sector 22D, Yamuna Expressway",
+  config: "3 & 4 BHK Luxury Residences",
+  price: "₹1.81 Cr onwards",
+  image: "/homepage/projects/gaur-yamuna.webp",
+  status: "Ongoing",
+  slug: "gaur-yamuna",
+},
+
 ];
 
 export default function CollectionsPage() {
