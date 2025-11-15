@@ -57,16 +57,23 @@ export default function Navbar() {
 </button>
 
         {/* 🏠 Logo */}
-        <Link href="/" className="flex justify-center items-center mx-auto z-[50]">
-          <Image
-            src="/hometreeLogo.png"
-            alt="Logo"
-            width={scrolled ? 220 : 220}
-            height={scrolled ? 100 : 100}
-            className="object-contain transition-all duration-300"
-            priority
-          />
-        </Link>
+<Link href="/" className="flex justify-center items-center mx-auto z-[50]">
+  <Image
+    src="/hometreeLogo.png"
+    alt="Logo"
+    width={scrolled ? 220 : 220}   // desktop width
+    height={scrolled ? 100 : 100}
+    className="
+      object-contain 
+      transition-all duration-300
+
+      w-[140px]       /* 📱 Mobile size */
+      md:w-[220px]    /* 💻 Desktop size */
+    "
+    priority
+  />
+</Link>
+
 
         {/* 📋 Desktop Navigation */}
         {scrolled && (
