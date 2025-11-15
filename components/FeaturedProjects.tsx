@@ -60,7 +60,7 @@ export default function FeaturedProjects() {
     if (!emblaApi) return;
     const interval = setInterval(() => {
       emblaApi.scrollNext();
-    }, 1500);
+    }, 2000);
     return () => clearInterval(interval);
   }, [emblaApi]);
 
