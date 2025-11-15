@@ -20,28 +20,7 @@ const commercialProjects = [
     status: "Ongoing",
     slug: "hometree-business-bay",
   },
-  {
-    id: 2,
-    title: "The Exchange Towers",
-    type: "Retail & Office Complex",
-    location: "Golf Course Road, Gurgaon",
-    config: "Retail + 4 Floors of Workspaces",
-    price: "₹1.1 Cr onwards*",
-    image: "/commercial2.jpg",
-    status: "Ongoing",
-    slug: "the-exchange-towers",
-  },
-  {
-    id: 3,
-    title: "HomeTree Trade Centre",
-    type: "Commercial Hub",
-    location: "Viman Nagar, Pune",
-    config: "Boutique Retail & Workspaces",
-    price: "₹1.3 Cr onwards*",
-    image: "/commercial3.jpg",
-    status: "Completed",
-    slug: "hometree-trade-centre",
-  },
+  
 ];
 
 export default function CommercialPage() {
@@ -57,7 +36,7 @@ export default function CommercialPage() {
   return (
     <div className="w-full">
       {/* 1️⃣ Hero Section */}
-      <section className="relative w-full h-[60vh] md:h-[120vh] overflow-hidden">
+      <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
         {isVideo ? (
           <video
             src={heroBackground}
