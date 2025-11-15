@@ -113,7 +113,7 @@ export default function ProjectDetail({ property }: { property: PropertyIn }) {
 
         {property.logo && (
           <div className="relative z-10 flex flex-col items-center justify-center">
-            <div className="w-36 h-36 md:w-48 md:h-48 flex items-center justify-center shadow-lg">
+            <div className="w-36 h-36 md:w-70 md:h-20 flex items-center justify-center shadow-lg">
               <Image
                 src={property.logo}
                 alt={`${property.name} logo`}
@@ -121,80 +121,111 @@ export default function ProjectDetail({ property }: { property: PropertyIn }) {
                 height={600}
                 className="object-contain"
               />
+              
+          
+            </div>
+            <div className="w-36 h-36 md:w-100 md:h-48 flex items-center justify-center shadow-lg">
+<h2 className="text-4xl text-white md:text-5xl font-bold">{property.name}</h2>
+               
             </div>
           </div>
         )}
       </section>
 
       {/* OVERVIEW SECTION */}
-      <section
-        className="relative py-16"
-        style={{
-          backgroundImage: property.overviewBg
-            ? `url(${property.overviewBg})`
-            : undefined,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
+<section
+  className="relative py-16"
+  style={{
+    backgroundImage: property.overviewBg
+      ? `url(${property.overviewBg})`
+      : undefined,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+  <div className="absolute inset-0 bg-black/60" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+  <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
 
-            {/* LEFT */}
-            <div className="lg:col-span-5 text-white flex flex-col justify-between">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold">{property.name}</h2>
-                <p className="mt-3 text-lg md:text-xl opacity-90">
-                  {property.tagline}
-                </p>
-              </div>
+      {/* LEFT */}
+      <div className="lg:col-span-5 text-white flex flex-col justify-between">
+        
+        {/* Title & tagline */}
+        <div>
+          <h2 className="text-4xl md:text-5xl font-bold">{property.name}</h2>
+          <p className="mt-3 text-lg md:text-xl opacity-90">
+            {property.tagline}
+          </p>
+        </div>
 
-              {/* CTA Button */}
-              <div className="mt-28">
-                <button
-                  style={{
-                    background: `linear-gradient(90deg, ${PRIMARY}, ${ACCENT})`,
-                  }}
-                  className="px-10 py-3 text-white font-semibold text-lg shadow-lg hover:opacity-90 transition"
-                >
-                  Enquire Now
-                </button>
-              </div>
-            </div>
+  {/* CTA Button Section */}
+<div className="mt-28">
 
-            {/* RIGHT */}
-            <div className="lg:col-span-7 text-white bg-white/10 backdrop-blur-sm py-16 px-6 shadow-lg">
-              <div className="space-y-7">
-                <p className="text-gray-100 leading-relaxed">
-                  {property.description}
-                </p>
+  {/* 🔘 Container that controls width — same as Enquire Now */}
+  <div className="w-fit flex flex-col gap-4">
 
-                <div>
-                  <h4 className="text-white text-lg font-semibold mb-2">Location</h4>
-                  <p className="text-gray-100">{property.locationText}</p>
-                </div>
+    {/* Enquire Now */}
+    <button
+      style={{
+        background: `linear-gradient(90deg, ${PRIMARY}, ${ACCENT})`,
+      }}
+      className="px-5 py-2 text-white font-semibold text-lg shadow-lg hover:opacity-90 transition w-full"
+    >
+      Enquire Now
+    </button>
 
-                <div>
-                  <h4 className="text-white text-lg font-semibold mb-2">
-                    Unit Types
-                  </h4>
-                  <p className="text-gray-100">{property.unitType}</p>
-                </div>
+    {/* ⭐ Download Brochure (same width & height) */}
+    <button
+      className="
+        px-5 py-2
+        text-white 
+        font-semibold text-lg 
+        border-[2px] border-white 
+        bg-transparent 
+        hover:bg-white hover:text-black 
+        transition 
+        w-full
+      "
+    >
+      Brochure
+    </button>
 
-                <div>
-                  <h4 className="text-white text-lg font-semibold mb-2">
-                    Possession
-                  </h4>
-                  <p className="text-gray-100">{property.possession}</p>
-                </div>
-              </div>
-            </div>
+  </div>
 
+</div>
+
+
+      </div>
+
+      {/* RIGHT */}
+      <div className="lg:col-span-7 text-white bg-white/10 backdrop-blur-sm py-10 px-6 shadow-lg">
+        <div className="space-y-7">
+          <p className="text-gray-100 leading-relaxed">
+            {property.description}
+          </p>
+
+          <div>
+            <h4 className="text-white text-lg font-semibold mb-2">Location</h4>
+            <p className="text-gray-100">{property.locationText}</p>
+          </div>
+
+          <div>
+            <h4 className="text-white text-lg font-semibold mb-2">Unit Types</h4>
+            <p className="text-gray-100">{property.unitType}</p>
+          </div>
+
+          <div>
+            <h4 className="text-white text-lg font-semibold mb-2">Possession</h4>
+            <p className="text-gray-100">{property.possession}</p>
           </div>
         </div>
-      </section>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
       {/* ================= GALLERY SECTION ================= */}
       <section className="relative py-14">
@@ -367,7 +398,7 @@ export default function ProjectDetail({ property }: { property: PropertyIn }) {
         <div className="absolute inset-0 bg-black/80" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <p className="max-w-3xl mx-auto text-gray-200 mb-12 leading-relaxed">
+          <p className="max-w-3xl mx-auto text-gray-200 mb-12 text-3xl leading-relaxed">
             Great Value Real is not just a place to live…
           </p>
 
@@ -407,11 +438,11 @@ export default function ProjectDetail({ property }: { property: PropertyIn }) {
       {/* ================= LOCATION ================= */}
       <section className="py-14">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h3 className="text-2xl md:text-4xl font-bold text-white mb-4">
             Location
           </h3>
 
-          <p className="text-white max-w-2xl mb-6">{property.locationText}</p>
+          <p className="text-white max-w-2xl text-2xl mb-6">{property.locationText}</p>
 
           <div className="w-full shadow-lg overflow-hidden">
             <div className="relative h-[280px] sm:h-[380px] md:h-[480px] lg:h-[550px] xl:h-[650px] bg-gray-900">

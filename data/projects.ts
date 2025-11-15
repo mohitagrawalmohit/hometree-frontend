@@ -110,16 +110,14 @@ export const projects: PropertyIn[] = [
     ],
 
     amenities: [
-      "Private Core Layouts",
-      "High-Speed Elevators",
-      "24/7 Security & Surveillance",
-      "Infinity Sky Pool",
-      "Signature Clubhouse",
-      "Fitness & Wellness Center",
+      "Swimming Pool",
+      "Basket Ball",
+      "GYM",
+      "Kids Play Area",
     ],
 
     description:
-      "Welcome to Jacob & Co Branded Residences, a limited-edition address that redefines sophistication and exclusivity in the heart of Noida. Crafted in collaboration with the global luxury house Jacob & Co, this development is more than a residence — it is a masterpiece where architecture, artistry and aspiration come together. Every detail — from the glass façade to the private core layouts — reflects perfection. Each residence offers panoramic views, timeless interiors and a lifestyle curated for the truly discerning.",
+      "Welcome to Jacob & Co Branded Residences, a limited-edition address that redefines sophistication and exclusivity in the heart of Noida. Crafted in collaboration with the global luxury house Jacob & Co, this development is more than a residence — it is a masterpiece where architecture, artistry and aspiration come together.",
 
     locationText: "Sector 97, Noida — Premium Luxury District",
 

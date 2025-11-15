@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
 
           <p className="text-sm md:text-base max-w-md mx-auto md:mx-0 mb-6 text-white/80">
-            Founded in 2020,{" "}
+            Founded in 2003,{" "}
             <span className="font-semibold text-white">HomeTree</span> is one of
             India’s fastest-growing real estate brands, redefining residential
             experiences through innovation, transparency, and design excellence.

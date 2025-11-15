@@ -28,28 +28,33 @@ export default function Navbar() {
       style={{ zIndex: 9999 }}
     >
       <div className="relative flex items-center justify-center max-w-7xl mx-auto px-6 py-4">
-        {/* 🍔 Hamburger (mobile only, visible when not scrolled) */}
-        {!scrolled && (
-          <button
-            onClick={toggleMenu}
-            className="absolute left-4 p-3 bg-none hover:bg-none transition backdrop-sm"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-13 h-13 text-[#00A17F] hover:text-[#BBD694]"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        )}
+       <button
+  onClick={toggleMenu}
+  className={`
+    absolute left-4 p-3 transition z-[60]
+
+    /* MOBILE — always visible */
+    block
+
+    /* DESKTOP — show when not scrolled, hide when scrolled */
+    ${!scrolled ? "md:block" : "md:hidden"}
+  `}
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={2}
+    stroke="currentColor"
+    className="w-13 h-13 text-[#00A17F] hover:text-[#BBD694]"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M4 6h16M4 12h16M4 18h16"
+    />
+  </svg>
+</button>
 
         {/* 🏠 Logo */}
         <Link href="/" className="flex justify-center items-center mx-auto z-[50]">
