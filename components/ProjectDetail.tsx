@@ -98,7 +98,7 @@ export default function ProjectDetail({ property }: { property: PropertyIn }) {
     >
 
       {/* HERO SECTION */}
-      <section className="relative w-full h-[70vh] md:h-[100vh] overflow-hidden flex items-center justify-center">
+      <section className="relative w-full h-[100vh] md:h-[100vh] overflow-hidden flex items-center justify-center">
         {property.heroImage && (
           <Image
             src={property.heroImage}
