@@ -55,6 +55,17 @@ const projects = [
   status: "Ongoing",
   slug: "gaur-yamuna",
 },
+{
+  id: 7,
+  title: "Greenbay Golf Village",
+  type: "Golf-Themed Plotted Township",
+  location: "Sector 22/25 Belt, Yamuna Expressway",
+  config: "120 – 500 sq. yds Freehold Plots",
+  price: "₹40 Lakhs onwards",
+  image: "/homepage/projects/greenbay.jpg",
+  status: "Completed",
+  slug: "greenbay",
+}
 
 ];
 

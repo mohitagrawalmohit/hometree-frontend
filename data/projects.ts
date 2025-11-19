@@ -327,7 +327,73 @@ export const projects: PropertyIn[] = [
       residences: "Freehold Plotted Parcel"
     }
   ]
+},
+{
+  id: 7,
+  slug: "greenbay",
+  name: "Greenbay Golf Village",
+  tagline: "Golf-Living Meets Freehold Land Investment",
+  logo: "/logos/greenbay.jpg",
+
+  possession: "EOI Open — Premium Golf-Facing Plots",
+  unitType: "120 – 500 sq. yds Freehold Plots",
+
+  heroImage: "/homepage/projects/greenbay.jpg",
+  overviewBg: "/project/overview-bg.webp",
+  section3Bg: "/project/section3-bg.jpg",
+  galleryBg: "/project/gallery-bg.jpg",
+
+  gallery: [
+    "/gallery-images/greenbay-gallery1.webp",
+    "/gallery-images/greenbay-gallery2.webp",
+    "/gallery-images/greenbay-gallery3.webp",
+    "/gallery-images/greenbay-gallery4.webp"
+  ],
+
+  map: "/maps/greenbay.png",
+
+  description:
+    "Greenbay Golf Village is a premium golf-themed plotted township along the Yamuna Expressway, offering freehold residential plots in a serene, low-density environment. Situated next to an 18-hole championship golf course, the township spans 100+ acres and features clubhouse facilities, sports areas, parks, and wide internal roads — ideal for villa development, retirement homes, weekend homes, and long-term investment.",
+
+  locationText: "Yamuna Expressway, Sector 22/25 Belt — Next to 18-Hole Golf Course",
+
+  amenities: [
+    "Golf-Course-Facing Plots (Select Inventory)",
+    "Clubhouse & Sports Facilities",
+    "Wide Landscaped Greens",
+    "Internal Wide Roads",
+    "Low-Density Township Planning",
+    "Children’s Play Areas",
+    "Resort-Style Living Environment"
+  ],
+
+  whyInvest: [
+    "Premium Golf-Themed Lifestyle",
+    "High Appreciation Due to Airport-Led Growth",
+    "Ideal for Villa, Retirement, or Weekend Home Development",
+    "Trusted Developer with Proven Delivery",
+    "Prime Expressway Connectivity in YEIDA Region"
+  ],
+
+  configurations: [
+    {
+      type: "Compact Plot",
+      size: "120 – 150 sq. yds.",
+      residences: "Freehold Plotted Parcel"
+    },
+    {
+      type: "Mid-Size Plot",
+      size: "180 – 250 sq. yds.",
+      residences: "Freehold Plotted Parcel"
+    },
+    {
+      type: "Large Plot",
+      size: "300 – 500 sq. yds.",
+      residences: "Freehold Plotted Parcel"
+    }
+  ]
 }
+
 
 
 ];

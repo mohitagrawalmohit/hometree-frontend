@@ -25,7 +25,7 @@ export default function FounderSection() {
           </h2>
 
           <h3 className="text-xl md:text-2xl font-semibold text-gray-800 mb-2">
-            Amit <span className="font-normal text-gray-600">(Founder & Real Estate Consultant)</span>
+            Amit Gaba <span className="font-normal text-gray-600">(Founder & Real Estate Consultant)</span>
           </h3>
 
           <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-6">
@@ -58,7 +58,7 @@ export default function FounderSection() {
         <div className="relative w-full h-[550px] md:h-[600px] rounded-lg overflow-hidden shadow-2xl">
           <Image
             src="/Founder.webp" // replace with your founder image
-            alt="Amit – Founder of HomeTree"
+            alt="Amit Gaba – Founder of HomeTree"
             fill
             className="object-cover object-center"
             priority
@@ -69,7 +69,7 @@ export default function FounderSection() {
 
           {/* Subtle name tag overlay */}
           <div className="absolute bottom-6 left-6 bg-white/80 backdrop-blur-md px-5 py-2 rounded-md shadow-md">
-            <p className="text-gray-800 font-semibold">Amit</p>
+            <p className="text-gray-800 font-semibold">Amit Gaba</p>
             <p className="text-sm text-gray-500 -mt-1">Founder, HomeTree</p>
           </div>
         </div>

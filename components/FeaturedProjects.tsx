@@ -42,7 +42,7 @@ const projects = [
     id: 4,
     title: "Ace Acreville",
     slug: "ace-acreville",
-    status: "Ongoing",
+    status: "Completed",
     description:
       "Freehold residential plots located in the fast-growing Noida Extension corridor — offering flexibility to design and build your dream home.",
     highlights: [
@@ -68,7 +68,25 @@ const projects = [
     "75,000+ sq. ft. luxury clubhouse",
   ],
   image: "/homepage/projects/gaur-yamuna.webp",
+},
+{
+  id: 7,
+  title: "Greenbay Golf Village",
+  slug: "greenbay",
+  status: "Completed",
+  description:
+    "A premium golf-themed plotted township along the Yamuna Expressway, featuring freehold residential plots, wide landscaped greens, and direct access to an 18-hole championship golf course — ideal for villas, retirement homes, and long-term investment near Noida International Airport.",
+  highlights: [
+    "Located in Sector 22/25 Belt, Yamuna Expressway",
+    "Developed by Greenbay Developers / Orris Group",
+    "120–500 sq. yds Freehold Plots",
+    "Golf-course-facing plots available (select inventory)",
+    "100+ acre integrated golf township",
+    "Premium clubhouse, sports zone & landscaped greens"
+  ],
+  image: "/homepage/projects/greenbay.jpg"
 }
+
 
 ];
 
