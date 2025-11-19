@@ -203,5 +203,131 @@ export const projects: PropertyIn[] = [
     }
   ]
 },
+{
+  id: 5,
+  slug: "experion-151-noida",
+  name: "Experion Sector 151",
+  tagline: "Premium, Low-Density Living by Experion Group",
+  logo: "/logos/experion-151.webp",   // update with actual logo
+  map: "/maps/experion-151.webp",
+
+  possession: "EOI Open — Launch Soon",
+  unitType: "3 & 4 BHK Spacious Residences",
+
+  heroImage: "/homepage/projects/experion-151.webp",     // update with your actual image
+  overviewBg: "/project/overview-bg.webp",
+  section3Bg: "/project/section3-bg.jpg",
+  galleryBg: "/project/gallery-bg.jpg",
+
+  gallery: [
+    "/gallery-images/experion-151-gallery1.webp",
+    "/gallery-images/experion-151-gallery3.webp",
+    "/gallery-images/experion-151-gallery4.webp",
+    "/gallery-images/experion-151-gallery5.webp"
+  ],
+
+ 
+
+  description:
+    "Experion introduces a premium, low-density residential community in Sector 151, Noida. Spread across an expected 15–20 acres with podium greens, premium clubhouse, expansive open spaces, and thoughtfully designed 3 & 4 BHK residences, this development is crafted for families seeking luxury, privacy, and long-term value near the Noida Expressway.",
+
+  locationText: "Sector 151, Noida — Near Noida-Greater Noida Expressway",
+
+  amenities: [
+    "Game",
+    "Mini Theatre",
+    "Sports",
+    "Gym",
+    "Swimming Pool",
+    "SPA"
+    
+  ],
+
+  whyInvest: [
+    "Developed by Experion — Known for High-Quality Delivery",
+    "Rare Low-Density Living in Noida’s New Sectors",
+    "Strong Appreciation Potential with Upcoming Mega Infra",
+    "Close to Noida Expressway, Metro Stations & Jewar Airport",
+    "Premium Clubhouse with Luxury Amenities"
+  ],
+
+  configurations: [
+    {
+      type: "3 BHK Premium",
+      size: "1,600 – 2,000 sq. ft.",
+      residences: "Spacious Sunlit Layouts"
+    },
+    {
+      type: "4 BHK Luxury",
+      size: "2,300 – 2,800 sq. ft.",
+      residences: "Large Premium Residences"
+    }
+  ]
+},
+{
+  id: 6,
+  slug: "ace-acreville",
+  name: "ACE Acreville",
+  tagline: "Premium Residential Plotted Development by ACE Group",
+  logo: "/logos/ace-acreville.webp",   // update with actual logo
+
+  possession: "EOI Open — Pre-Launch Phase",
+  unitType: "100 – 300 sq. yds Freehold Plots",
+
+  heroImage: "/homepage/projects/ace-acreville.webp",
+  overviewBg: "/project/overview-bg.webp",
+  section3Bg: "/project/section3-bg.jpg",
+  galleryBg: "/project/gallery-bg.jpg",
+
+  gallery: [
+    "/gallery-images/ace-acreville-gallery1.webp",
+    "/gallery-images/ace-acreville-gallery2.webp",
+    "/gallery-images/ace-acreville-gallery3.webp"
+  ],
+
+  map: "/maps/ace-acreville.jpg",
+
+  description:
+    "ACE Acreville is a premium freehold plotted township by ACE Group along the Yamuna Expressway. Spread across 35+ acres with wide roads, green belts, secured entry, and modern township amenities, Acreville offers residential plots ranging from 100 to 300 sq. yds — ideal for families planning to build their dream homes or investors seeking high-growth land in India’s fastest-developing airport corridor.",
+
+  locationText: "Sector 22A, Yamuna Expressway — Near Noida International Airport",
+
+  amenities: [
+    "KID PLAY AREA",
+    "BASKETBALL",
+    "BADMINTON",
+    "BANQUET",
+    "JOGGING TRACK",
+    "GYM"
+    
+  ],
+
+  whyInvest: [
+    "Freehold Plots with Complete Construction Freedom",
+    "Located in India’s Fastest-Growing Airport & Film City Corridor",
+    "Developed by ACE Group — Trusted Premium Developer",
+    "High Appreciation Potential in YEIDA Region",
+    "Ideal for Self-Use as well as Long-Term Investment"
+  ],
+
+  configurations: [
+    {
+      type: "Small Plot",
+      size: "100 – 150 sq. yds.",
+      residences: "Freehold Plotted Parcel"
+    },
+    {
+      type: "Medium Plot",
+      size: "160 – 200 sq. yds.",
+      residences: "Freehold Plotted Parcel"
+    },
+    {
+      type: "Large Plot",
+      size: "250 – 300 sq. yds.",
+      residences: "Freehold Plotted Parcel"
+    }
+  ]
+}
+
 
 ];

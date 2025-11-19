@@ -124,7 +124,7 @@ export default function ProjectDetail({ property }: { property: PropertyIn }) {
               
           
             </div>
-            <div className="w-100 h-36 md:w-100 md:h-48 flex items-center justify-center shadow-lg">
+            <div className="w-100 h-36 md:w-150 md:h-48 flex items-center justify-center shadow-lg">
 <h2 className="text-4xl text-white md:text-5xl font-bold">{property.name}</h2>
                
             </div>
