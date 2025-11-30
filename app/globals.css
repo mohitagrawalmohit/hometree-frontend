@@ -125,3 +125,25 @@ html {
     @apply bg-background text-foreground;
   }
 }
+.hero-fade {
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+.horizontal-section {
+  position: relative;
+  height: 180vh; /* boxes start EARLY */
+}
+
+.horizontal-track {
+  position: sticky;
+  top: 20vh;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.horizontal-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  will-change: transform;
+}
+

@@ -82,7 +82,7 @@ export default function Navbar() {
               Home
             </Link>
 
-            <Link href="#aboutUs" className="hover:text-[#BBD694] transition">
+            <Link href="/about-us" className="hover:text-[#BBD694] transition">
               About Us
             </Link>
 
