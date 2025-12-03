@@ -17,6 +17,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
        <head>
+        {/* ✅ Google Tag (gtag.js) */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-1KV8Z3HNFM"
+        />
+
+        <Script id="gtag-init">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1KV8Z3HNFM');
+          `}
+        </Script>
         {/* ✅ META PIXEL — placed inside head as Meta recommends */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
