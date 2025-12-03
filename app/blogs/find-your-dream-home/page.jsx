@@ -18,7 +18,7 @@ export default function HometreeBlogPage() {
       {/* ======================================================
           HERO SECTION — PREMIUM BANNER
       ====================================================== */}
-      <section className="relative w-full h-[420px] md:h-[620px] lg:h-[720px] overflow-hidden">
+      <section className="relative w-full h-[420px] md:h-[620px] lg:h-[750px] overflow-hidden">
         
         {/* BACKGROUND IMAGE */}
         <Image
@@ -293,7 +293,7 @@ export default function HometreeBlogPage() {
               </a>
 
               <a
-                href="https://wa.me/919756523326"
+                href="https://wa.me/919540830309"
                 target="_blank"
                 className="px-8 py-4 border border-[#00A17F] text-[#00A17F] rounded-lg text-lg font-semibold hover:bg-[#00A17F] hover:text-white transition"
               >
