@@ -17,7 +17,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
 
-        {/* FORM (imported component) */}
+        {/* FORM SECTION */}
         <FooterForm />
 
         {/* BRAND CONTENT */}
@@ -34,15 +34,29 @@ export default function Footer() {
             />
           </div>
 
+          {/* Description */}
           <p className="text-sm md:text-base max-w-md mx-auto md:mx-0 mb-6 text-white/80 leading-relaxed">
             Founded in 2003, <span className="font-semibold text-white">HomeTree</span> is
             one of India’s fastest-growing real estate brands—known for trust,
             innovation, and long-term value creation. We specialise in premium
-            Noida developments built around design, sustainability, and modern living.
+            Noida developments built with design, sustainability, and modern living.
           </p>
 
+          {/* ⭐ NEW BUTTON ADDED HERE ⭐ */}
+          <div className="mt-6 flex justify-center md:justify-start">
+            <a
+              href="/careers"
+              className="px-7 py-3 rounded-lg text-sm font-semibold text-white 
+                        bg-gradient-to-r from-[#00A17F] to-[#BBD694] 
+                        hover:opacity-90 transition-all shadow-md"
+            >
+              Join Our Team →
+            </a>
+          </div>
+
+          {/* Copyright */}
           <p className="text-xs md:text-sm text-white/60 mt-10">
-            Copyright © {new Date().getFullYear()} HomeTree Developers.  
+            Copyright © {new Date().getFullYear()} HomeTree Developers.
             All rights reserved.
           </p>
         </div>

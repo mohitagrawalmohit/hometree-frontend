@@ -70,9 +70,7 @@ export default function Navbar({ openForm }: NavbarProps) {
               Home
             </Link>
 
-            <Link href="/blogs" className="hover:text-[#BBD694] transition">
-              Blogs
-            </Link>
+            
 
             {/* DROPDOWN */}
             <div
@@ -104,6 +102,13 @@ export default function Navbar({ openForm }: NavbarProps) {
                 )}
               </AnimatePresence>
             </div>
+            <Link href="/blogs" className="hover:text-[#BBD694] transition">
+              Blogs
+            </Link>
+            
+            <Link href="/about-us" className="hover:text-[#BBD694] transition">
+              About Us
+            </Link>
 
             {/* CONTACT US — USE ROOTLAYOUT POPUP */}
             <button
@@ -131,10 +136,11 @@ export default function Navbar({ openForm }: NavbarProps) {
             <motion.nav className="flex flex-col items-center space-y-10 text-4xl font-medium">
               {[
                 { name: "Home", href: "/" },
-                { name: "About Us", href: "/about-us" },
+               
                 { name: "Residential Projects", href: "/residential" },
-                { name: "Commercial Projects", href: "/commercial" },
                 { name: "Blogs", href: "/blogs" },
+                 { name: "About Us", href: "/about-us" },
+                { name: "Career", href: "/careers" },
               ].map((item) => (
                 <Link
                   key={item.name}
