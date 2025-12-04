@@ -43,15 +43,7 @@ export default function FounderSection() {
             <span className="not-italic text-sm text-gray-500">– Amit</span>
           </blockquote>
 
-          {/* CTA */}
-          <button
-            className="flex items-center gap-2 text-base font-medium text-white px-6 py-3 shadow-md hover:opacity-90 transition-all"
-            style={{
-              background: `linear-gradient(90deg, ${PRIMARY}, ${ACCENT})`,
-            }}
-          >
-            Watch Founder Stories <ArrowRightCircle size={20} />
-          </button>
+          
         </div>
 
         {/* RIGHT: Founder Image */}
