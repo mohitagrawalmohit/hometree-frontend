@@ -10,14 +10,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Script from "next/script";
 
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const [showForm, setShowForm] = useState(false); // GLOBAL POPUP FORM STATE
+  const [showForm, setShowForm] = useState(false); 
 
   return (
     <html lang="en">
-       <head>
-        {/* ✅ Google Tag (gtag.js) */}
+      <head>
+        {/* ✅ Google Tag Manager */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-1KV8Z3HNFM"
@@ -31,7 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-1KV8Z3HNFM');
           `}
         </Script>
-        {/* ✅ META PIXEL — placed inside head as Meta recommends */}
+
+        {/* ✅ UPDATED META PIXEL CODE */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
@@ -42,39 +42,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '2679719842383703');
+            fbq('init', '3701149343527165');
             fbq('track', 'PageView');
           `}
         </Script>
 
+        {/* NOSCRIPT IMAGE */}
         <noscript>
           <img
             height="1"
             width="1"
             style={{ display: "none" }}
-            src="https://www.facebook.com/tr?id=2679719842383703&ev=PageView&noscript=1"
+            src="https://www.facebook.com/tr?id=3701149343527165&ev=PageView&noscript=1"
           />
         </noscript>
       </head>
+
       <body className="relative overflow-x-hidden">
 
-        {/* NAVBAR */}
         <div className="relative z-[9999]">
-          {/* PASS openForm TO NAVBAR */}
           <Navbar openForm={() => setShowForm(true)} />
         </div>
 
-        {/* FLOATING CONTACT BUTTON */}
         <FloatingContactButton openForm={() => setShowForm(true)} />
-<WhatsAppButton /> 
-        {/* PAGE CONTENT */}
-        <main className="relative z-[1]">
-          {children}
-        </main>
+        <WhatsAppButton />
+
+        <main className="relative z-[1]">{children}</main>
 
         <Footer />
 
-        {/* GLOBAL FORM POPUP */}
         <AnimatePresence>
           {showForm && (
             <motion.div
@@ -91,10 +87,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 40 }}
                 transition={{ duration: 0.4 }}
-                className="relative w-full max-w-md"   // FIXED: Correct size + center
+                className="relative w-full max-w-md"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* CLOSE BUTTON */}
                 <button
                   className="absolute -top-4 -right-4 bg-white text-black 
                              w-10 h-10 rounded-full shadow-lg hover:bg-gray-200"
@@ -103,13 +98,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ✕
                 </button>
 
-                {/* YOUR EXISTING FORM */}
                 <FooterForm />
               </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
-
       </body>
     </html>
   );

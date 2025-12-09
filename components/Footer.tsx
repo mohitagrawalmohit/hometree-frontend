@@ -42,7 +42,7 @@ export default function Footer() {
             Noida developments built with design, sustainability, and modern living.
           </p>
 
-          {/* ⭐ NEW BUTTON ADDED HERE ⭐ */}
+          {/* Join Our Team Button */}
           <div className="mt-6 flex justify-center md:justify-start">
             <a
               href="/careers"
@@ -51,6 +51,18 @@ export default function Footer() {
                         hover:opacity-90 transition-all shadow-md"
             >
               Join Our Team →
+            </a>
+          </div>
+
+          {/* ⭐ PRIVACY POLICY BUTTON (New) ⭐ */}
+          <div className="mt-4 flex justify-center md:justify-start">
+            <a
+              href="/privacy-policy"
+              className="px-6 py-2.5 rounded-lg text-xs font-semibold text-white 
+                        bg-white/10 border border-white/20 backdrop-blur-md
+                        hover:bg-white hover:text-black transition-all shadow-md"
+            >
+              Privacy Policy
             </a>
           </div>
 
