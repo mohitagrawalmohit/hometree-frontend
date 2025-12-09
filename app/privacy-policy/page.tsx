@@ -206,7 +206,7 @@ export default function PrivacyPolicyPage() {
             <p className="mt-3">
               To exercise these rights, email us at:
               <br />
-              📧 <strong>[Add Email]</strong>
+              📧 <strong>hometree.co.in@gmail.com</strong>
             </p>
           </div>
 
@@ -255,11 +255,11 @@ export default function PrivacyPolicyPage() {
             <p className="leading-relaxed">
               If you have questions or concerns regarding this Privacy Policy, contact us:
               <br />
-              📧 <strong>[Add Email]</strong>
+              📧 <strong>hometree.co.in@gmail.com</strong>
               <br />
               📞 <strong>+919540830309</strong>
               <br />
-              🏢 <strong>[Add Company Address]</strong>
+              🏢 <strong>2nd FLOOR, J.S. Arcade, M-114, Captain Vijyant Thapar Marg, D Block, Pocket D, Sector 18, Noida, Uttar Pradesh 201301</strong>
             </p>
           </div>
         </div>

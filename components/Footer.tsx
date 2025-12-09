@@ -5,6 +5,7 @@ import FooterForm from "../components/FooterForm";
 export default function Footer() {
   return (
     <section
+    id="contactus" 
       className="relative py-20 md:py-28 text-white overflow-hidden"
       style={{
         backgroundImage: "url('/footer-bg.jpeg')",
